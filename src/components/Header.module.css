@@ -1,0 +1,13 @@
+/* Header라는 컴포넌트에서만 사용하는 css (css module) */
+
+.header{
+    /* 수평 정렬 */
+    display:flex;   
+    /* 사이 간격(Home 과 About 사이 간격을 12px로 띄운다.) => margin-right 대신 사용 가능!! */
+    gap: 12px;
+}
+
+.active{
+    color: red;
+    font-weight: bold;
+}

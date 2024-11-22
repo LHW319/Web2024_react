@@ -1,0 +1,17 @@
+body{
+    height:3000px;
+}
+
+/* 헤더 하위만 스크롤 되도록 하고 헤더는 고정 */
+/* header{
+    position:fixed; 
+    top:0;
+    left:0;
+    width:100%;
+    background-color: rgba(255,255,255,0.7);
+} */
+
+/* 전역 css -> 피하는 것이 좋다!! */
+/* .active {
+    color: red;
+} */

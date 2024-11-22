@@ -1,0 +1,55 @@
+.modal{
+    /* // viewport 기준으로 배치 */
+    position: fixed;    
+    top:0;
+    left:0;
+    /* 화면 가로 세로 다 써라 */
+    width:100vw; 
+    height:100vh;
+    display:flex; 
+    justify-content:center;
+    align-items:center;
+}
+
+.overlay{
+    /* // display flex에 영향받지 않는다. */
+    position:absolute; 
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.content{
+    /* // 끄면 뒤로 감. 왜? - 요소 쌓임 순서 (z-index는 position 값이 있는 경우에만 적용 가능) */
+    position:relative;  
+    /* z-index 기본값은 auto */
+    /* z-index가 같으면 나중에 만들어진 요소가 올라옴 */
+    background-color: #fff;
+
+    /* // 최대한 늘어나라(500px 까지 늘어날 수 있다!) */
+    /* max-width:500px;     */
+    /* width:100%; */
+    width:500px;
+    height:700px;
+    max-height:80vh;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    overflow: auto;
+    transition: width .5s, height 1s .4s;   /* property ; height, duration: 1s, delay: .4s */
+    /* transition-property: 어떤 속성의 전환효과?; */
+    /* transition-property: CSS 속성 이름; (디폴트 all이고, width 등을 기입하면 된다.)
+    transition-duration: 지속시간;
+    transition-delay: 지연시간;*/
+} 
+
+.content_loading{
+    width: 200px;
+    height: 200px;
+    display:flex;
+    flex-direction: row;        /* 주 축의 방향 */
+    justify-content: center;    /* 주 축 */
+    align-items: center;        /* 교차축 */
+}
